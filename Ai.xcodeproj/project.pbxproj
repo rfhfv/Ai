@@ -54,14 +54,86 @@
 		848EFF8E2FE96893006ECFA7 /* Ai */ = {
 			isa = PBXGroup;
 			children = (
-				848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */,
-				848EFF912FE96893006ECFA7 /* SceneDelegate.swift */,
-				848EFF932FE96893006ECFA7 /* ViewController.swift */,
-				848EFF982FE96898006ECFA7 /* Assets.xcassets */,
-				848EFF9A2FE96898006ECFA7 /* LaunchScreen.storyboard */,
+				848EFFA32FE96CB9006ECFA7 /* Applications */,
+				848EFFA42FE96CE5006ECFA7 /* Core */,
+				848EFFA52FE96D19006ECFA7 /* Coordinators */,
+				848EFFA62FE96D23006ECFA7 /* Modules */,
+				848EFFA92FE96D4C006ECFA7 /* Common */,
+				848EFFAC2FE96D84006ECFA7 /* Resources */,
 				848EFF9D2FE96898006ECFA7 /* Info.plist */,
 			);
 			path = Ai;
+			sourceTree = "<group>";
+		};
+		848EFFA32FE96CB9006ECFA7 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */,
+				848EFF912FE96893006ECFA7 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		848EFFA42FE96CE5006ECFA7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		848EFFA52FE96D19006ECFA7 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		848EFFA62FE96D23006ECFA7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				848EFFA82FE96D3E006ECFA7 /* Video */,
+				848EFFA72FE96D2D006ECFA7 /* Chat */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		848EFFA72FE96D2D006ECFA7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		848EFFA82FE96D3E006ECFA7 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		848EFFA92FE96D4C006ECFA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				848EFFAA2FE96D53006ECFA7 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		848EFFAA2FE96D53006ECFA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				848EFF932FE96893006ECFA7 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		848EFFAC2FE96D84006ECFA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				848EFF982FE96898006ECFA7 /* Assets.xcassets */,
+				848EFF9A2FE96898006ECFA7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
