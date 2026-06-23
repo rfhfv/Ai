@@ -17,9 +17,14 @@
 		84206AB22FEA470000388EFE /* DolaChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB12FEA470000388EFE /* DolaChatResponse.swift */; };
 		84206AB42FEA47BB00388EFE /* DolaMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB32FEA47BB00388EFE /* DolaMessageResponse.swift */; };
 		84206AB62FEA511100388EFE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB52FEA511100388EFE /* ChatService.swift */; };
+		84206ABB2FEA5BD200388EFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ABA2FEA5BD200388EFE /* AppCoordinator.swift */; };
+		84206ABD2FEA5D4500388EFE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ABC2FEA5D4500388EFE /* MainCoordinator.swift */; };
+		84206AC32FEA5E2800388EFE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC22FEA5E2700388EFE /* VideoViewController.swift */; };
+		84206AC52FEA648B00388EFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC42FEA648B00388EFE /* MainViewController.swift */; };
+		84206AC72FEA680E00388EFE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC62FEA680E00388EFE /* MainPresenter.swift */; };
 		848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */; };
 		848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF912FE96893006ECFA7 /* SceneDelegate.swift */; };
-		848EFF942FE96893006ECFA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF932FE96893006ECFA7 /* ViewController.swift */; };
+		848EFF942FE96893006ECFA7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF932FE96893006ECFA7 /* ChatViewController.swift */; };
 		848EFF992FE96898006ECFA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EFF982FE96898006ECFA7 /* Assets.xcassets */; };
 		848EFF9C2FE96898006ECFA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EFF9A2FE96898006ECFA7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -36,10 +41,15 @@
 		84206AB12FEA470000388EFE /* DolaChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolaChatResponse.swift; sourceTree = "<group>"; };
 		84206AB32FEA47BB00388EFE /* DolaMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolaMessageResponse.swift; sourceTree = "<group>"; };
 		84206AB52FEA511100388EFE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		84206ABA2FEA5BD200388EFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		84206ABC2FEA5D4500388EFE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		84206AC22FEA5E2700388EFE /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		84206AC42FEA648B00388EFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84206AC62FEA680E00388EFE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		848EFF8C2FE96893006ECFA7 /* Ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EFF912FE96893006ECFA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		848EFF932FE96893006ECFA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		848EFF932FE96893006ECFA7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		848EFF982FE96898006ECFA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848EFF9B2FE96898006ECFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848EFF9D2FE96898006ECFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +102,47 @@
 				84206AB52FEA511100388EFE /* ChatService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		84206AC82FEA773E00388EFE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				84206AC92FEA774900388EFE /* Views */,
+				84206ACA2FEA776600388EFE /* Presenters */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84206AC92FEA774900388EFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84206AC42FEA648B00388EFE /* MainViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84206ACA2FEA776600388EFE /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				84206AC62FEA680E00388EFE /* MainPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		84206ACB2FEA777E00388EFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				848EFF932FE96893006ECFA7 /* ChatViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84206ACC2FEA778700388EFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84206AC22FEA5E2700388EFE /* VideoViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		848EFF832FE96893006ECFA7 = {
@@ -148,6 +199,8 @@
 		848EFFA52FE96D19006ECFA7 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				84206ABA2FEA5BD200388EFE /* AppCoordinator.swift */,
+				84206ABC2FEA5D4500388EFE /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -155,8 +208,9 @@
 		848EFFA62FE96D23006ECFA7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				848EFFA82FE96D3E006ECFA7 /* Video */,
+				84206AC82FEA773E00388EFE /* Main */,
 				848EFFA72FE96D2D006ECFA7 /* Chat */,
+				848EFFA82FE96D3E006ECFA7 /* Video */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -164,6 +218,7 @@
 		848EFFA72FE96D2D006ECFA7 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				84206ACB2FEA777E00388EFE /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -171,6 +226,7 @@
 		848EFFA82FE96D3E006ECFA7 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				84206ACC2FEA778700388EFE /* Views */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -186,7 +242,6 @@
 		848EFFAA2FE96D53006ECFA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				848EFF932FE96893006ECFA7 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,15 +327,20 @@
 			files = (
 				84206AB02FEA465900388EFE /* SendDolaMessageResponse.swift in Sources */,
 				84206AA42FEA3B2800388EFE /* Constants.swift in Sources */,
-				848EFF942FE96893006ECFA7 /* ViewController.swift in Sources */,
+				848EFF942FE96893006ECFA7 /* ChatViewController.swift in Sources */,
+				84206AC72FEA680E00388EFE /* MainPresenter.swift in Sources */,
 				848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */,
 				84206AB62FEA511100388EFE /* ChatService.swift in Sources */,
 				84206AA92FEA437100388EFE /* NetworkManager.swift in Sources */,
+				84206ABB2FEA5BD200388EFE /* AppCoordinator.swift in Sources */,
 				84206AAE2FEA45A800388EFE /* SendDolaMessageRequest.swift in Sources */,
+				84206AC32FEA5E2800388EFE /* VideoViewController.swift in Sources */,
 				84206AA72FEA425500388EFE /* NetworkError.swift in Sources */,
 				848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */,
 				84206AB42FEA47BB00388EFE /* DolaMessageResponse.swift in Sources */,
+				84206ABD2FEA5D4500388EFE /* MainCoordinator.swift in Sources */,
 				84206AA22FEA390D00388EFE /* KeychainManager.swift in Sources */,
+				84206AC52FEA648B00388EFE /* MainViewController.swift in Sources */,
 				84206AB22FEA470000388EFE /* DolaChatResponse.swift in Sources */,
 				84206AAB2FEA446F00388EFE /* APIEndpoint.swift in Sources */,
 			);
