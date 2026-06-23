@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84206AA22FEA390D00388EFE /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AA12FEA390D00388EFE /* KeychainManager.swift */; };
+		84206AA42FEA3B2800388EFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AA32FEA3B2800388EFE /* Constants.swift */; };
+		84206AA72FEA425500388EFE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AA62FEA425500388EFE /* NetworkError.swift */; };
+		84206AA92FEA437100388EFE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AA82FEA437100388EFE /* NetworkManager.swift */; };
+		84206AAB2FEA446F00388EFE /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AAA2FEA446F00388EFE /* APIEndpoint.swift */; };
+		84206AAE2FEA45A800388EFE /* SendDolaMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AAD2FEA45A800388EFE /* SendDolaMessageRequest.swift */; };
+		84206AB02FEA465900388EFE /* SendDolaMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AAF2FEA465900388EFE /* SendDolaMessageResponse.swift */; };
+		84206AB22FEA470000388EFE /* DolaChatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB12FEA470000388EFE /* DolaChatResponse.swift */; };
+		84206AB42FEA47BB00388EFE /* DolaMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB32FEA47BB00388EFE /* DolaMessageResponse.swift */; };
+		84206AB62FEA511100388EFE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AB52FEA511100388EFE /* ChatService.swift */; };
 		848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */; };
 		848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF912FE96893006ECFA7 /* SceneDelegate.swift */; };
 		848EFF942FE96893006ECFA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF932FE96893006ECFA7 /* ViewController.swift */; };
@@ -15,6 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84206AA12FEA390D00388EFE /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		84206AA32FEA3B2800388EFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		84206AA62FEA425500388EFE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		84206AA82FEA437100388EFE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84206AAA2FEA446F00388EFE /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		84206AAD2FEA45A800388EFE /* SendDolaMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDolaMessageRequest.swift; sourceTree = "<group>"; };
+		84206AAF2FEA465900388EFE /* SendDolaMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDolaMessageResponse.swift; sourceTree = "<group>"; };
+		84206AB12FEA470000388EFE /* DolaChatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolaChatResponse.swift; sourceTree = "<group>"; };
+		84206AB32FEA47BB00388EFE /* DolaMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolaMessageResponse.swift; sourceTree = "<group>"; };
+		84206AB52FEA511100388EFE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		848EFF8C2FE96893006ECFA7 /* Ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EFF912FE96893006ECFA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +56,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84206AAC2FEA457600388EFE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				84206AAA2FEA446F00388EFE /* APIEndpoint.swift */,
+				84206AA62FEA425500388EFE /* NetworkError.swift */,
+				84206AA82FEA437100388EFE /* NetworkManager.swift */,
+				84206AB82FEA55EC00388EFE /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		84206AB72FEA55C700388EFE /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				84206AA12FEA390D00388EFE /* KeychainManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		84206AB82FEA55EC00388EFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84206AAD2FEA45A800388EFE /* SendDolaMessageRequest.swift */,
+				84206AAF2FEA465900388EFE /* SendDolaMessageResponse.swift */,
+				84206AB12FEA470000388EFE /* DolaChatResponse.swift */,
+				84206AB32FEA47BB00388EFE /* DolaMessageResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84206AB92FEA560100388EFE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84206AB52FEA511100388EFE /* ChatService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		848EFF832FE96893006ECFA7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +115,7 @@
 			children = (
 				848EFFA32FE96CB9006ECFA7 /* Applications */,
 				848EFFA42FE96CE5006ECFA7 /* Core */,
+				84206AB92FEA560100388EFE /* Services */,
 				848EFFA52FE96D19006ECFA7 /* Coordinators */,
 				848EFFA62FE96D23006ECFA7 /* Modules */,
 				848EFFA92FE96D4C006ECFA7 /* Common */,
@@ -77,6 +137,10 @@
 		848EFFA42FE96CE5006ECFA7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */,
+				84206AA32FEA3B2800388EFE /* Constants.swift */,
+				84206AB72FEA55C700388EFE /* Keychain */,
+				84206AAC2FEA457600388EFE /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -206,9 +270,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84206AB02FEA465900388EFE /* SendDolaMessageResponse.swift in Sources */,
+				84206AA42FEA3B2800388EFE /* Constants.swift in Sources */,
 				848EFF942FE96893006ECFA7 /* ViewController.swift in Sources */,
 				848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */,
+				84206AB62FEA511100388EFE /* ChatService.swift in Sources */,
+				84206AA92FEA437100388EFE /* NetworkManager.swift in Sources */,
+				84206AAE2FEA45A800388EFE /* SendDolaMessageRequest.swift in Sources */,
+				84206AA72FEA425500388EFE /* NetworkError.swift in Sources */,
 				848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */,
+				84206AB42FEA47BB00388EFE /* DolaMessageResponse.swift in Sources */,
+				84206AA22FEA390D00388EFE /* KeychainManager.swift in Sources */,
+				84206AB22FEA470000388EFE /* DolaChatResponse.swift in Sources */,
+				84206AAB2FEA446F00388EFE /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +302,7 @@
 /* Begin XCBuildConfiguration section */
 		848EFF9E2FE96898006ECFA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -291,6 +366,7 @@
 		};
 		848EFF9F2FE96898006ECFA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -347,6 +423,7 @@
 		};
 		848EFFA12FE96898006ECFA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,6 +456,7 @@
 		};
 		848EFFA22FE96898006ECFA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84206AA52FEA3DFC00388EFE /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
