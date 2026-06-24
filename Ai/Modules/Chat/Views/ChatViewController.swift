@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+final class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         title = "Chat"
     }
 }

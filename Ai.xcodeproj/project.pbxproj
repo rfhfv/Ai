@@ -22,6 +22,17 @@
 		84206AC32FEA5E2800388EFE /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC22FEA5E2700388EFE /* VideoViewController.swift */; };
 		84206AC52FEA648B00388EFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC42FEA648B00388EFE /* MainViewController.swift */; };
 		84206AC72FEA680E00388EFE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AC62FEA680E00388EFE /* MainPresenter.swift */; };
+		84206ACE2FEA78BD00388EFE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ACD2FEA78BD00388EFE /* GradientView.swift */; };
+		84206AD12FEA7A6E00388EFE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AD02FEA7A6E00388EFE /* UIColor.swift */; };
+		84206AD32FEA7CA400388EFE /* VideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AD22FEA7CA400388EFE /* VideoCardView.swift */; };
+		84206AD62FEA7E2D00388EFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AD52FEA7E2D00388EFE /* Strings.swift */; };
+		84206AD82FEA80AB00388EFE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AD72FEA80AB00388EFE /* UIView.swift */; };
+		84206ADA2FEA868700388EFE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AD92FEA868700388EFE /* MainView.swift */; };
+		84206ADC2FEA8DD500388EFE /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ADB2FEA8DD500388EFE /* CustomSearchBar.swift */; };
+		84206ADE2FEACBB200388EFE /* FeatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ADD2FEACBB200388EFE /* FeatureCardView.swift */; };
+		84206AE02FEACFE300388EFE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206ADF2FEACFE300388EFE /* UILabel.swift */; };
+		84206AE32FEAD1AF00388EFE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AE22FEAD1AF00388EFE /* Typography.swift */; };
+		84206AE52FEB8F9F00388EFE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84206AE42FEB8F9F00388EFE /* Images.swift */; };
 		848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */; };
 		848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF912FE96893006ECFA7 /* SceneDelegate.swift */; };
 		848EFF942FE96893006ECFA7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EFF932FE96893006ECFA7 /* ChatViewController.swift */; };
@@ -46,6 +57,17 @@
 		84206AC22FEA5E2700388EFE /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		84206AC42FEA648B00388EFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		84206AC62FEA680E00388EFE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		84206ACD2FEA78BD00388EFE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		84206AD02FEA7A6E00388EFE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		84206AD22FEA7CA400388EFE /* VideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardView.swift; sourceTree = "<group>"; };
+		84206AD52FEA7E2D00388EFE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		84206AD72FEA80AB00388EFE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		84206AD92FEA868700388EFE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		84206ADB2FEA8DD500388EFE /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		84206ADD2FEACBB200388EFE /* FeatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCardView.swift; sourceTree = "<group>"; };
+		84206ADF2FEACFE300388EFE /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		84206AE22FEAD1AF00388EFE /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		84206AE42FEB8F9F00388EFE /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		848EFF8C2FE96893006ECFA7 /* Ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EFF8F2FE96893006ECFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EFF912FE96893006ECFA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				84206AC42FEA648B00388EFE /* MainViewController.swift */,
+				84206AD92FEA868700388EFE /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,9 +163,37 @@
 		84206ACC2FEA778700388EFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84206AD22FEA7CA400388EFE /* VideoCardView.swift */,
 				84206AC22FEA5E2700388EFE /* VideoViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84206ACF2FEA7A4C00388EFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84206AD72FEA80AB00388EFE /* UIView.swift */,
+				84206ADF2FEACFE300388EFE /* UILabel.swift */,
+				84206AD02FEA7A6E00388EFE /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84206AD42FEA7E1000388EFE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				84206AD52FEA7E2D00388EFE /* Strings.swift */,
+				84206AE42FEB8F9F00388EFE /* Images.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		84206AE12FEAD18900388EFE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84206AE22FEAD1AF00388EFE /* Typography.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		848EFF832FE96893006ECFA7 = {
@@ -234,7 +285,10 @@
 		848EFFA92FE96D4C006ECFA7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84206AE12FEAD18900388EFE /* Helpers */,
+				84206AD42FEA7E1000388EFE /* Constants */,
 				848EFFAA2FE96D53006ECFA7 /* Views */,
+				84206ACF2FEA7A4C00388EFE /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,6 +296,9 @@
 		848EFFAA2FE96D53006ECFA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84206ACD2FEA78BD00388EFE /* GradientView.swift */,
+				84206ADB2FEA8DD500388EFE /* CustomSearchBar.swift */,
+				84206ADD2FEACBB200388EFE /* FeatureCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,17 +382,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84206ACE2FEA78BD00388EFE /* GradientView.swift in Sources */,
+				84206ADA2FEA868700388EFE /* MainView.swift in Sources */,
 				84206AB02FEA465900388EFE /* SendDolaMessageResponse.swift in Sources */,
 				84206AA42FEA3B2800388EFE /* Constants.swift in Sources */,
+				84206AE02FEACFE300388EFE /* UILabel.swift in Sources */,
+				84206AD12FEA7A6E00388EFE /* UIColor.swift in Sources */,
 				848EFF942FE96893006ECFA7 /* ChatViewController.swift in Sources */,
 				84206AC72FEA680E00388EFE /* MainPresenter.swift in Sources */,
+				84206ADC2FEA8DD500388EFE /* CustomSearchBar.swift in Sources */,
 				848EFF902FE96893006ECFA7 /* AppDelegate.swift in Sources */,
+				84206AE52FEB8F9F00388EFE /* Images.swift in Sources */,
+				84206AD82FEA80AB00388EFE /* UIView.swift in Sources */,
 				84206AB62FEA511100388EFE /* ChatService.swift in Sources */,
+				84206ADE2FEACBB200388EFE /* FeatureCardView.swift in Sources */,
 				84206AA92FEA437100388EFE /* NetworkManager.swift in Sources */,
+				84206AE32FEAD1AF00388EFE /* Typography.swift in Sources */,
 				84206ABB2FEA5BD200388EFE /* AppCoordinator.swift in Sources */,
 				84206AAE2FEA45A800388EFE /* SendDolaMessageRequest.swift in Sources */,
 				84206AC32FEA5E2800388EFE /* VideoViewController.swift in Sources */,
+				84206AD62FEA7E2D00388EFE /* Strings.swift in Sources */,
 				84206AA72FEA425500388EFE /* NetworkError.swift in Sources */,
+				84206AD32FEA7CA400388EFE /* VideoCardView.swift in Sources */,
 				848EFF922FE96893006ECFA7 /* SceneDelegate.swift in Sources */,
 				84206AB42FEA47BB00388EFE /* DolaMessageResponse.swift in Sources */,
 				84206ABD2FEA5D4500388EFE /* MainCoordinator.swift in Sources */,

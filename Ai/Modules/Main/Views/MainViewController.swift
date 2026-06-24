@@ -10,6 +10,11 @@ import UIKit
 final class MainViewController: UIViewController {
     
     private let presenter: MainPresenterProtocol
+    private let mainView = MainView()
+    
+    override func loadView() {
+        view = mainView
+    }
     
     init(presenter: MainPresenterProtocol) {
         self.presenter = presenter
@@ -20,64 +25,18 @@ final class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var chatButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Chat", for: .normal)
-        button.backgroundColor = .systemPink
-        button.layer.cornerRadius = 14
-        button.addTarget(self, action: #selector(didTapChatButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    private lazy var videoButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Video", for: .normal)
-        button.backgroundColor = .systemPink
-        button.layer.cornerRadius = 14
-        button.addTarget(self, action: #selector(didTapVideoButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        mainView.delegate = self
     }
 }
 
-private extension MainViewController {
-    
-    func setupUI() {
-        setupViews()
-        setupConstraints()
-    }
-    
-    func setupViews() {
-        view.backgroundColor = .systemBackground
-        view.addSubview(chatButton)
-        view.addSubview(videoButton)
-    }
-    
-    @objc private func didTapChatButton() {
+extension MainViewController: MainViewDelegate {
+    func didTapSearch() {
         presenter.didTapChat()
     }
     
-    @objc private func didTapVideoButton() {
+    func didTapVideoCard() {
         presenter.didTapVideo()
-    }
-    
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            chatButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            chatButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            chatButton.heightAnchor.constraint(equalToConstant: 60),
-            chatButton.widthAnchor.constraint(equalToConstant: 100),
-            
-            videoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            videoButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            videoButton.heightAnchor.constraint(equalToConstant: 60),
-            videoButton.widthAnchor.constraint(equalToConstant: 100)
-        ])
     }
 }
