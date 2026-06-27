@@ -14,11 +14,22 @@ protocol MainViewDelegate: AnyObject {
 
 final class MainView: UIView {
     
+    private enum Constants {
+        static let settingsButtonSize: CGFloat = 40
+        static let sparkImageViewSize: CGFloat = 60
+        static let searchBarViewSize: CGFloat = 56
+        
+        static let videoCardViewHSize: CGFloat = 313
+        static let videoCardViewWSize: CGFloat = 172
+        
+        static let smallCardViewHSize: CGFloat = 152
+    }
+    
     weak var delegate: MainViewDelegate?
     
     private let backgroundGradient: GradientView = {
         let v = GradientView(
-            colors: [.cmDarkBLue, .cmBlack, .cmNight],
+            colors: [.cmDarkBlue, .cmBlack, .cmNight],
             startPoint: CGPoint(x: 0.5, y: 0),
             endPoint: CGPoint(x: 0.5, y: 1)
         )
@@ -62,19 +73,20 @@ final class MainView: UIView {
     
     private let titleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(text: Strings.Main.mainTitle, font: Typography.hugeTitleB.font)
+        l.configureLabel(text: Strings.Main.mainTitle, font: Typography.b28.font)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     private let settingsButton: UIButton = {
         let b = UIButton()
-        let config = UIImage.SymbolConfiguration(pointSize: 20, weight: .regular)
         b.setImage(UIImage(named: Images.Main.settingsImage), for: .normal)
         b.tintColor = .white.withAlphaComponent(0.7)
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -123,40 +135,38 @@ private extension MainView {
             backgroundGradient.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             settingsButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            settingsButton.widthAnchor.constraint(equalToConstant: 40),
-            settingsButton.heightAnchor.constraint(equalToConstant: 40),
+            settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s20),
+            settingsButton.widthAnchor.constraint(equalToConstant: Constants.settingsButtonSize),
+            settingsButton.heightAnchor.constraint(equalToConstant: Constants.settingsButtonSize),
             
-            sparkImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            sparkImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Insets.s40),
             sparkImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            sparkImageView.widthAnchor.constraint(equalToConstant: 60),
-            sparkImageView.heightAnchor.constraint(equalToConstant: 60),
+            sparkImageView.widthAnchor.constraint(equalToConstant: Constants.sparkImageViewSize),
+            sparkImageView.heightAnchor.constraint(equalToConstant: Constants.sparkImageViewSize),
             
-            titleLabel.topAnchor.constraint(equalTo: sparkImageView.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            titleLabel.topAnchor.constraint(equalTo: sparkImageView.bottomAnchor, constant: Insets.s16),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s20),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s20),
             
-            searchBarView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
-            searchBarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            searchBarView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-            searchBarView.heightAnchor.constraint(equalToConstant: 56),
+            searchBarView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Insets.s24),
+            searchBarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s12),
+            searchBarView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s12),
+            searchBarView.heightAnchor.constraint(equalToConstant: Constants.searchBarViewSize),
             
-            videoCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: 24),
-            videoCardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            videoCardView.widthAnchor.constraint(equalToConstant: 172),
-            videoCardView.heightAnchor.constraint(equalToConstant: 313),
+            videoCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s24),
+            videoCardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s20),
+            videoCardView.widthAnchor.constraint(equalToConstant: Constants.videoCardViewWSize),
+            videoCardView.heightAnchor.constraint(equalToConstant: Constants.videoCardViewHSize),
             
-            fixCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: 24),
-            fixCardView.leadingAnchor.constraint(equalTo: videoCardView.trailingAnchor, constant: 8),
-            fixCardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            fixCardView.heightAnchor.constraint(equalToConstant: 152),
-            fixCardView.widthAnchor.constraint(equalToConstant: 178),
+            fixCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s24),
+            fixCardView.leadingAnchor.constraint(equalTo: videoCardView.trailingAnchor, constant: Insets.s8),
+            fixCardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16),
+            fixCardView.heightAnchor.constraint(equalToConstant: Constants.smallCardViewHSize),
             
-            summarizeCardView.topAnchor.constraint(equalTo: fixCardView.bottomAnchor, constant: 8),
-            summarizeCardView.leadingAnchor.constraint(equalTo: videoCardView.trailingAnchor, constant: 8),
-            summarizeCardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            summarizeCardView.heightAnchor.constraint(equalToConstant: 152),
-            summarizeCardView.widthAnchor.constraint(equalToConstant: 178)
+            summarizeCardView.topAnchor.constraint(equalTo: fixCardView.bottomAnchor, constant: Insets.s8),
+            summarizeCardView.leadingAnchor.constraint(equalTo: videoCardView.trailingAnchor, constant: Insets.s8),
+            summarizeCardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16),
+            summarizeCardView.heightAnchor.constraint(equalToConstant: Constants.smallCardViewHSize)
         ])
     }
 }

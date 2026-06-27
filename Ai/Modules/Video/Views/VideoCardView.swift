@@ -9,14 +9,21 @@ import UIKit
 
 final class VideoCardView: UIView {
     
+    private enum Constants {
+        static let iconImageViewSize: CGFloat = 36
+        
+        static let readyButtonHSize: CGFloat = 32
+        static let readyButtonWSize: CGFloat = 150
+    }
+    
     private let gradientView: GradientView = {
         let v = GradientView(
-            colors: [.cmBLue, .cmPink, .cmRed],
+            colors: [.cmBlue, .cmPink, .cmRed],
             startPoint: CGPoint(x: 0, y: 0),
             endPoint: CGPoint(x: 1, y: 1)
         )
         
-        v.layer.cornerRadius = 16
+        v.layer.cornerRadius = Size.Common.cornerRadius16
         v.clipsToBounds = true
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
@@ -40,14 +47,14 @@ final class VideoCardView: UIView {
     
     private let titleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(text: Strings.Main.videoTitle, font: Typography.largeM.font)
+        l.configureLabel(text: Strings.Main.videoTitle, font: Typography.m20.font)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     private let subtitleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(text: Strings.Main.videoSubtitle, font: Typography.mediumR.font)
+        l.configureLabel(text: Strings.Main.videoSubtitle, font: Typography.r14.font)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
@@ -85,7 +92,7 @@ private extension VideoCardView {
         config.cornerStyle = .capsule
         config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { attrs in
             var attrs = attrs
-            attrs.font = Typography.smallR.font
+            attrs.font = Typography.r12.font
             return attrs
         }
         return config
@@ -108,22 +115,22 @@ private extension VideoCardView {
             backgroundLineImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundLineImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            iconImageView.topAnchor.constraint(equalTo: gradientView.topAnchor, constant: 16),
-            iconImageView.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 16),
-            iconImageView.heightAnchor.constraint(equalToConstant: 36),
-            iconImageView.widthAnchor.constraint(equalToConstant: 36),
+            iconImageView.topAnchor.constraint(equalTo: gradientView.topAnchor, constant: Insets.s16),
+            iconImageView.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: Insets.s16),
+            iconImageView.heightAnchor.constraint(equalToConstant: Constants.iconImageViewSize),
+            iconImageView.widthAnchor.constraint(equalToConstant: Constants.iconImageViewSize),
             
-            titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 12),
-            titleLabel.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: gradientView.trailingAnchor, constant: -16),
+            titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: Insets.s12),
+            titleLabel.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: Insets.s16),
+            titleLabel.trailingAnchor.constraint(equalTo: gradientView.trailingAnchor, constant: -Insets.s16),
             
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            subtitleLabel.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 16),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Insets.s8),
+            subtitleLabel.leadingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: Insets.s16),
             
             readyButton.centerXAnchor.constraint(equalTo: gradientView.centerXAnchor),
-            readyButton.bottomAnchor.constraint(equalTo: gradientView.bottomAnchor, constant: -16),
-            readyButton.heightAnchor.constraint(equalToConstant: 32),
-            readyButton.widthAnchor.constraint(equalToConstant: 150)
+            readyButton.bottomAnchor.constraint(equalTo: gradientView.bottomAnchor, constant: -Insets.s16),
+            readyButton.heightAnchor.constraint(equalToConstant: Constants.readyButtonHSize),
+            readyButton.widthAnchor.constraint(equalToConstant: Constants.readyButtonWSize)
         ])
     }
 }

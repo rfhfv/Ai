@@ -12,9 +12,7 @@ final class MainViewController: UIViewController {
     private let presenter: MainPresenterProtocol
     private let mainView = MainView()
     
-    override func loadView() {
-        view = mainView
-    }
+    // MARK: - Init
     
     init(presenter: MainPresenterProtocol) {
         self.presenter = presenter
@@ -23,6 +21,12 @@ final class MainViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
+    
+    override func loadView() {
+        view = mainView
     }
     
     override func viewDidLoad() {

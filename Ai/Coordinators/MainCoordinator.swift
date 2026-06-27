@@ -13,6 +13,7 @@ protocol MainCoordinatorProtocol: AnyObject {
 }
 
 final class MainCoordinator: Coordinator, MainCoordinatorProtocol {
+    private var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -26,8 +27,9 @@ final class MainCoordinator: Coordinator, MainCoordinatorProtocol {
     }
     
     func showChat() {
-        let vc = ChatViewController()
-        navigationController.pushViewController(vc, animated: true)
+        let chatCoordinator = ChatCoordinator(navigationController: navigationController)
+        childCoordinators.append(chatCoordinator)
+        chatCoordinator.start()
     }
     
     func showVideo() {

@@ -9,6 +9,10 @@ import UIKit
 
 final class SearchBarView: UIView {
     
+    private enum Constants {
+        static let iconImageViewSize: CGFloat = 20
+    }
+    
     private var gradientBorderLayer: CAGradientLayer?
     
     let textField: UITextField = {
@@ -58,7 +62,7 @@ private extension SearchBarView {
         
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [UIColor.cmPink.cgColor, UIColor.cmBLue.cgColor]
+        gradient.colors = [UIColor.cmPink.cgColor, UIColor.cmBlue.cgColor]
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         gradient.cornerRadius = layer.cornerRadius
@@ -76,7 +80,7 @@ private extension SearchBarView {
     
     func setupViews() {
         backgroundColor = UIColor.white.withAlphaComponent(0.1)
-        layer.cornerRadius = 20
+        layer.cornerRadius = Size.Common.cornerRadius20
         clipsToBounds = false
         
         addSubviews(iconImageView, textField)
@@ -84,13 +88,13 @@ private extension SearchBarView {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s16),
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 20),
-            iconImageView.heightAnchor.constraint(equalToConstant: 20),
+            iconImageView.widthAnchor.constraint(equalToConstant: Constants.iconImageViewSize),
+            iconImageView.heightAnchor.constraint(equalToConstant: Constants.iconImageViewSize),
             
-            textField.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
-            textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            textField.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: Insets.s8),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16),
             textField.centerYAnchor.constraint(equalTo: centerYAnchor),
             textField.heightAnchor.constraint(equalTo: heightAnchor)
         ])

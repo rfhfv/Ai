@@ -12,13 +12,20 @@ protocol MainPresenterProtocol: AnyObject {
     func didTapVideo()
 }
 
-final class MainPresenter: MainPresenterProtocol {
+final class MainPresenter {
     
     private let coordinator: MainCoordinator
+    
+    // MARK: - Init
     
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
     }
+}
+
+// MARK: - MainPresenterProtocol
+
+extension MainPresenter: MainPresenterProtocol {
     
     func didTapChat() {
         coordinator.showChat()

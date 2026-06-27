@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
     func configureLabel(
         text: String? = nil,
-        font: UIFont = .systemFont(ofSize: 14, weight: .regular),
+        font: UIFont = Typography.r14.font,
         color: UIColor = .white,
         alignment: NSTextAlignment = .center,
         numberOfLines: Int = 0

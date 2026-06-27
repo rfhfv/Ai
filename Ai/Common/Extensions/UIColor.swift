@@ -8,11 +8,13 @@
 import UIKit
 
 extension UIColor {
-    static var cmNight: UIColor { UIColor(named: "Night") ?? UIColor.black }
-    static var cmBlack: UIColor { UIColor(named: "Black") ?? UIColor.darkGray }
-    static var cmGray: UIColor { UIColor(named: "Dark Gray") ?? UIColor.gray }
-    static var cmDarkBLue: UIColor { UIColor(named: "Dark Blue") ?? UIColor.systemBlue }
-    static var cmBLue: UIColor { UIColor(named: "Blue") ?? UIColor.blue }
-    static var cmRed: UIColor { UIColor(named: "Red") ?? UIColor.red }
-    static var cmPink: UIColor { UIColor(named: "Pink") ?? UIColor.pink }
+    static var cmNight: UIColor { UIColor(named: "CustomNight") ?? UIColor.black }
+    static var cmBlack: UIColor { UIColor(named: "CustomBlack") ?? UIColor.darkGray }
+    static var cmChocolate: UIColor { UIColor(named: "CustomChocolate") ?? UIColor.brown }
+    static var cmGray: UIColor { UIColor(named: "CustomGray") ?? UIColor.gray }
+    static var cmDarkGray: UIColor { UIColor(named: "CustomDarkGray") ?? UIColor.gray }
+    static var cmDarkBlue: UIColor { UIColor(named: "CustomDarkBlue") ?? UIColor.systemBlue }
+    static var cmBlue: UIColor { UIColor(named: "CustomBlue") ?? UIColor.blue }
+    static var cmRed: UIColor { UIColor(named: "CustomRed") ?? UIColor.red }
+    static var cmPink: UIColor { UIColor(named: "CustomPink") ?? UIColor.systemPink }
 }

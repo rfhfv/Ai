@@ -9,6 +9,10 @@ import UIKit
 
 final class FeatureCardView: UIView {
     
+    private enum Constants {
+        static let imageViewSize: CGFloat = 36
+    }
+    
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
@@ -18,14 +22,14 @@ final class FeatureCardView: UIView {
     
     private let titleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(font: Typography.bigM.font, alignment: .left)
+        l.configureLabel(font: Typography.m16.font, alignment: .left)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     private let subtitleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(font: Typography.smallM.font, color: .cmGray, alignment: .left)
+        l.configureLabel(font: Typography.m12.font, color: .cmGray, alignment: .left)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
@@ -53,26 +57,26 @@ private extension FeatureCardView {
     }
     
     func setupViews() {
-        layer.cornerRadius = 20
+        layer.cornerRadius = Size.Common.cornerRadius16
         clipsToBounds = true
-        backgroundColor = .cmBlack
+        backgroundColor = .cmChocolate
         addSubviews(imageView, titleLabel, subtitleLabel)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            imageView.heightAnchor.constraint(equalToConstant: 36),
-            imageView.widthAnchor.constraint(equalToConstant: 36),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: Insets.s16),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s16),
+            imageView.heightAnchor.constraint(equalToConstant: Constants.imageViewSize),
+            imageView.widthAnchor.constraint(equalToConstant: Constants.imageViewSize),
             
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Insets.s24),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s16),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16),
             
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Insets.s8),
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s16),
+            subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16)
         ])
     }
 }

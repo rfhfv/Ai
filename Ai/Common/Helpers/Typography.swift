@@ -8,26 +8,26 @@
 import UIKit
 
 enum Typography {
-    case smallR, smallM, smallB, mediumR, mediumM, mediumB, bigR, bigM, bigB, largeR, largeM, largeB, hugeR, hugeM, hugeB, hugeTitleB
+    case r12, m12, b12, r14, m14, b14, r16, m16, b16, r20, m20, b20, r24, m24, b24, b28
     
     var font: UIFont {
         switch self {
-        case .smallR: return .systemFont(ofSize: 12, weight: .regular)
-        case .smallM: return .systemFont(ofSize: 12, weight: .medium)
-        case .smallB: return .systemFont(ofSize: 12, weight: .bold)
-        case .mediumR: return .systemFont(ofSize: 14, weight: .regular)
-        case .mediumM: return .systemFont(ofSize: 14, weight: .medium)
-        case .mediumB: return .systemFont(ofSize: 14, weight: .bold)
-        case .bigR: return .systemFont(ofSize: 16, weight: .regular)
-        case .bigM: return .systemFont(ofSize: 16, weight: .medium)
-        case .bigB: return .systemFont(ofSize: 16, weight: .bold)
-        case .largeR: return .systemFont(ofSize: 20, weight: .regular)
-        case .largeM: return .systemFont(ofSize: 20, weight: .medium)
-        case .largeB: return .systemFont(ofSize: 20, weight: .bold)
-        case .hugeR: return .systemFont(ofSize: 24, weight: .regular)
-        case .hugeM: return .systemFont(ofSize: 24, weight: .medium)
-        case .hugeB: return .systemFont(ofSize: 24, weight: .bold)
-        case .hugeTitleB: return .systemFont(ofSize: 28, weight: .bold)
+        case .r12: return .systemFont(ofSize: 12, weight: .regular)
+        case .m12: return .systemFont(ofSize: 12, weight: .medium)
+        case .b12: return .systemFont(ofSize: 12, weight: .bold)
+        case .r14: return .systemFont(ofSize: 14, weight: .regular)
+        case .m14: return .systemFont(ofSize: 14, weight: .medium)
+        case .b14: return .systemFont(ofSize: 14, weight: .bold)
+        case .r16: return .systemFont(ofSize: 16, weight: .regular)
+        case .m16: return .systemFont(ofSize: 16, weight: .medium)
+        case .b16: return .systemFont(ofSize: 16, weight: .bold)
+        case .r20: return .systemFont(ofSize: 20, weight: .regular)
+        case .m20: return .systemFont(ofSize: 20, weight: .medium)
+        case .b20: return .systemFont(ofSize: 20, weight: .bold)
+        case .r24: return .systemFont(ofSize: 24, weight: .regular)
+        case .m24: return .systemFont(ofSize: 24, weight: .medium)
+        case .b24: return .systemFont(ofSize: 24, weight: .bold)
+        case .b28: return .systemFont(ofSize: 28, weight: .bold)
         }
     }
 }
