@@ -81,7 +81,7 @@ final class MainView: UIView {
     private let settingsButton: UIButton = {
         let b = UIButton()
         b.setImage(UIImage(named: Images.Main.settingsImage), for: .normal)
-        b.tintColor = .white.withAlphaComponent(0.7)
+        b.alpha = 0.7
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
@@ -134,12 +134,12 @@ private extension MainView {
             backgroundGradient.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundGradient.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            settingsButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            settingsButton.topAnchor.constraint(equalTo: topAnchor, constant: Insets.s80),
             settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s20),
             settingsButton.widthAnchor.constraint(equalToConstant: Constants.settingsButtonSize),
             settingsButton.heightAnchor.constraint(equalToConstant: Constants.settingsButtonSize),
             
-            sparkImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Insets.s40),
+            sparkImageView.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: Insets.s24),
             sparkImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             sparkImageView.widthAnchor.constraint(equalToConstant: Constants.sparkImageViewSize),
             sparkImageView.heightAnchor.constraint(equalToConstant: Constants.sparkImageViewSize),
@@ -153,12 +153,12 @@ private extension MainView {
             searchBarView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s12),
             searchBarView.heightAnchor.constraint(equalToConstant: Constants.searchBarViewSize),
             
-            videoCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s24),
+            videoCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s40),
             videoCardView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Insets.s20),
             videoCardView.widthAnchor.constraint(equalToConstant: Constants.videoCardViewWSize),
             videoCardView.heightAnchor.constraint(equalToConstant: Constants.videoCardViewHSize),
             
-            fixCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s24),
+            fixCardView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: Insets.s40),
             fixCardView.leadingAnchor.constraint(equalTo: videoCardView.trailingAnchor, constant: Insets.s8),
             fixCardView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s16),
             fixCardView.heightAnchor.constraint(equalToConstant: Constants.smallCardViewHSize),

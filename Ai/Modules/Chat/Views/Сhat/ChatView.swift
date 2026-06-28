@@ -67,12 +67,14 @@ final class ChatView: UIView {
     private let titleLabel: UILabel = {
         let l = UILabel()
         l.configureLabel(text: Strings.Chat.aiChatTitle, font: Typography.b20.font)
+        l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     private let subtitleLabel: UILabel = {
         let l = UILabel()
         l.configureLabel(text: Strings.Chat.dateTitle, font: Typography.r14.font, color: .cmGray)
+        l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
@@ -84,9 +86,9 @@ final class ChatView: UIView {
         return s
     }()
     
-    private let refreshButton: UIButton = {
+    private let historyButton: UIButton = {
         let b = UIButton(type: .system)
-        b.setImage(UIImage(named: Images.Chat.refreshImage)?.withRenderingMode(.alwaysOriginal), for: .normal)
+        b.setImage(UIImage(named: Images.Chat.historyImage)?.withRenderingMode(.alwaysOriginal), for: .normal)
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
@@ -149,9 +151,8 @@ private extension ChatView {
     }
     
     func setupViews() {
-        titleStack.addArrangedSubview(titleLabel)
-        titleStack.addArrangedSubview(subtitleLabel)
-        topBar.addSubviews(backButton, avatarIconView, titleStack, refreshButton)
+        titleStack.addArrangedSubviews(titleLabel, subtitleLabel)
+        topBar.addSubviews(backButton, avatarIconView, titleStack, historyButton)
         inputContainer.addSubviews(inputTextField, importButton, microButton)
         addSubviews(topBar, tableView, inputContainer)
     }
@@ -159,7 +160,7 @@ private extension ChatView {
     func setupActions() {
         backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         importButton.addTarget(self, action: #selector(didTapSend), for: .touchUpInside)
-        refreshButton.addTarget(self, action: #selector(didTapHistoryButton), for: .touchUpInside)
+        historyButton.addTarget(self, action: #selector(didTapHistoryButton), for: .touchUpInside)
     }
     
     @objc func didTapBackButton() {
@@ -195,9 +196,9 @@ private extension ChatView {
             titleStack.leadingAnchor.constraint(equalTo: avatarIconView.trailingAnchor, constant: Insets.s12),
             titleStack.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
             
-            refreshButton.trailingAnchor.constraint(equalTo: topBar.trailingAnchor, constant: -Insets.s16),
-            refreshButton.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
-            refreshButton.widthAnchor.constraint(equalToConstant: Insets.s24),
+            historyButton.trailingAnchor.constraint(equalTo: topBar.trailingAnchor, constant: -Insets.s16),
+            historyButton.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
+            historyButton.widthAnchor.constraint(equalToConstant: Insets.s24),
             
             tableView.topAnchor.constraint(equalTo: topBar.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),

@@ -18,7 +18,7 @@ final class ChatHistoryView: UIView {
         static let backButtonSize: CGFloat = 24
         static let emptyIconViewSize: CGFloat = 60
         static let emptyContainerHSize: CGFloat = 156
-        static let emptyContainerTopInset: CGFloat = 300
+        static let emptyContainerTopInset: CGFloat = 330
     }
     
     weak var delegate: ChatHistoryViewDelegate?

@@ -38,4 +38,27 @@ enum Strings {
         static let emptyTitle = "No chats yet"
         static let emptySubtitle = "Start a conversation to see\nyour history here"
     }
+    
+    enum Video {
+        static let title = "AI Video"
+        static let previewTitle = "Title"
+        static let alertTitle = "Allow access to photos?"
+        static let alertMessage = "To upload an image, the app needs access to your photo gallery."
+        static let cancelText = "Cancel"
+        static let settingsText = "Settings"
+    }
+    
+    enum Generation {
+        static let createText = "Create"
+    }
+    
+    enum Result {
+        static let title = "Result"
+        static let generationTitle = "Generating..."
+        static let generationSubTitle = "We're creating the best result for you"
+        static let replaceText = "Replace"
+        static let shareText = "Share"
+        static let downloadText = "Download"
+        static let saveVideoText = "Video has been saved\nto your gallery"
+    }
 }

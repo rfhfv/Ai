@@ -14,11 +14,11 @@ protocol MainPresenterProtocol: AnyObject {
 
 final class MainPresenter {
     
-    private let coordinator: MainCoordinator
+    private let coordinator: MainCoordinatorProtocol
     
     // MARK: - Init
     
-    init(coordinator: MainCoordinator) {
+    init(coordinator: MainCoordinatorProtocol) {
         self.coordinator = coordinator
     }
 }

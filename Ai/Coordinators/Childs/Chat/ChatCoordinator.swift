@@ -12,7 +12,8 @@ protocol ChatCoordinatorProtocol {
     func showHistory()
 }
 
-final class ChatCoordinator: Coordinator, ChatCoordinatorProtocol {
+final class ChatCoordinator: Coordinator {
+    
     private var historyCoordinator: ChatHistoryCoordinator?
     var navigationController: UINavigationController
     
@@ -26,6 +27,9 @@ final class ChatCoordinator: Coordinator, ChatCoordinatorProtocol {
         presenter.view = vc
         navigationController.pushViewController(vc, animated: true)
     }
+}
+
+extension ChatCoordinator: ChatCoordinatorProtocol {
     
     func backToMain() {
         navigationController.popViewController(animated: true)

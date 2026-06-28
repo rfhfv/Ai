@@ -47,7 +47,7 @@ final class VideoCardView: UIView {
     
     private let titleLabel: UILabel = {
         let l = UILabel()
-        l.configureLabel(text: Strings.Main.videoTitle, font: Typography.m20.font)
+        l.configureLabel(text: Strings.Main.videoTitle, font: Typography.m20.font, alignment: .left)
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()

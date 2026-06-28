@@ -33,7 +33,8 @@ final class MainCoordinator: Coordinator, MainCoordinatorProtocol {
     }
     
     func showVideo() {
-        let vc = VideoViewController()
-        navigationController.pushViewController(vc, animated: true)
+        let coordinator = VideoCoordinator(navigationController: navigationController)
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }

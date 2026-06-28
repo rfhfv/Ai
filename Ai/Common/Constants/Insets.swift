@@ -17,6 +17,7 @@ enum Insets {
     static let s28: CGFloat = 28
     static let s32: CGFloat = 32
     static let s40: CGFloat = 40
+    static let s56: CGFloat = 56
     static let s64: CGFloat = 64
     static let s80: CGFloat = 80
 }

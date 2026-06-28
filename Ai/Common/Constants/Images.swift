@@ -25,7 +25,7 @@ enum Images {
     
     enum Chat {
         static let aIChatSparksImage = "AI Chat Sparks"
-        static let refreshImage = "Refresh"
+        static let historyImage = "History"
         static let importImage = "Import"
         static let microImage = "Micro"
         static let microFillImage = "Micro Fill"
@@ -36,5 +36,23 @@ enum Images {
         static let historyStars = "History Stars"
         static let magicPencil = "Magic Pencil"
     }
+    
+    enum Video {
+        static let defaultImageOne = "Default Image One"
+        static let defaultImageTwo = "Default Image Two"
+        static let aiVideoImage = "AI Video Image"
+    }
+    
+    enum Generation {
+        static let removeImage = "Remove"
+        static let plusImage = "plus"
+    }
+    
+    enum Result {
+        static let loadingImage = "Loading"
+        static let replaceImage = "Replace"
+        static let resultImage = "Result"
+        static let playVideoImage = "Play Video"
+        static let checkmarkImage = "Checkmark"
+    }
 }
-
