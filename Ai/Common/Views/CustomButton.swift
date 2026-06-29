@@ -79,7 +79,7 @@ private extension CustomButton {
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconView.widthAnchor.constraint(equalToConstant: Constants.iconViewSize),
             iconView.heightAnchor.constraint(equalToConstant: Constants.iconViewSize),
-
+            
             titleLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: Insets.s8),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s12)

@@ -10,6 +10,7 @@ import UIKit
 protocol MainViewDelegate: AnyObject {
     func didTapSearch()
     func didTapVideoCard()
+    func showPaywall()
 }
 
 final class MainView: UIView {
@@ -27,14 +28,12 @@ final class MainView: UIView {
     
     weak var delegate: MainViewDelegate?
     
-    private let backgroundGradient: GradientView = {
-        let v = GradientView(
-            colors: [.cmDarkBlue, .cmBlack, .cmNight],
-            startPoint: CGPoint(x: 0.5, y: 0),
-            endPoint: CGPoint(x: 0.5, y: 1)
-        )
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
+    private let backgroundImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: Images.Common.backgroundImage)
+        iv.contentMode = .scaleAspectFill
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
     }()
     
     private let searchBarView: SearchBarView = {
@@ -81,7 +80,7 @@ final class MainView: UIView {
     private let settingsButton: UIButton = {
         let b = UIButton()
         b.setImage(UIImage(named: Images.Main.settingsImage), for: .normal)
-        b.alpha = 0.7
+        b.alpha = 0.8
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
@@ -92,6 +91,7 @@ final class MainView: UIView {
         super.init(frame: frame)
         setupUI()
         setupGestures()
+        setupActions()
     }
     
     required init?(coder: NSCoder) {
@@ -99,7 +99,10 @@ final class MainView: UIView {
     }
 }
 
+// MARK: - Private
+
 private extension MainView {
+    
     func setupUI() {
         setupViews()
         setupConstraints()
@@ -115,6 +118,10 @@ private extension MainView {
         videoCardView.isUserInteractionEnabled = true
     }
     
+    func setupActions() {
+        settingsButton.addTarget(self, action: #selector(settingsButtonTapped), for: .touchUpInside)
+    }
+    
     @objc func searchTapped() {
         delegate?.didTapSearch()
     }
@@ -123,16 +130,20 @@ private extension MainView {
         delegate?.didTapVideoCard()
     }
     
+    @objc func settingsButtonTapped() {
+        delegate?.showPaywall()
+    }
+    
     func setupViews() {
-        addSubviews(backgroundGradient, sparkImageView, titleLabel, searchBarView, videoCardView, fixCardView, summarizeCardView, settingsButton)
+        addSubviews(backgroundImageView, sparkImageView, titleLabel, searchBarView, videoCardView, fixCardView, summarizeCardView, settingsButton)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            backgroundGradient.topAnchor.constraint(equalTo: topAnchor),
-            backgroundGradient.leadingAnchor.constraint(equalTo: leadingAnchor),
-            backgroundGradient.trailingAnchor.constraint(equalTo: trailingAnchor),
-            backgroundGradient.bottomAnchor.constraint(equalTo: bottomAnchor),
+            backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             settingsButton.topAnchor.constraint(equalTo: topAnchor, constant: Insets.s80),
             settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Insets.s20),

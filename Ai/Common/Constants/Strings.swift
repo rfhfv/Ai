@@ -8,6 +8,7 @@
 import Foundation
 
 enum Strings {
+    
     enum Main {
         static let mainTitle = "Your AI tools,\n ready to go"
         static let searchPlaceholder = "Ask anything..."
@@ -24,12 +25,14 @@ enum Strings {
     }
     
     enum Chat {
+        static let chatId = "current_chat_id"
         static let aiChatTitle = "AI Chat"
         static let dateTitle = "26.03.2026"
         static let title = "Your AI assistant for anything"
         static let subtitle = "Ask questions, get answers, and explore ideas\nin seconds"
         static let placeholder = "How can I help you?"
         static let askPlaceholder = "Ask anything..."
+        static let errorText = "Что-то пошло не так. Попробуй ещё раз."
     }
     
     
@@ -45,7 +48,7 @@ enum Strings {
         static let alertTitle = "Allow access to photos?"
         static let alertMessage = "To upload an image, the app needs access to your photo gallery."
         static let cancelText = "Cancel"
-        static let settingsText = "Settings"
+        static let allowText = "Allow"
     }
     
     enum Generation {
@@ -60,5 +63,24 @@ enum Strings {
         static let shareText = "Share"
         static let downloadText = "Download"
         static let saveVideoText = "Video has been saved\nto your gallery"
+    }
+    
+    enum Paywall {
+        static let title = "Create anything\nyou want"
+        static let starsSubtitle = "Get results in seconds"
+        static let textSubtitle = "Turn any text into better writing"
+        static let infoSubtitle = "Simplify complex information"
+        static let contentSubtitle = "Create content with AI templates"
+        static let cancelTitle = "⊘ Cancel Anytime"
+        static let unlockNowText = "Unlock now"
+        static let errorTitle = "Error"
+        static let okTitle = "Ok"
+        static let subscriptionsNotFoundText = "No active subscriptions found."
+        static let privacyPolicyText = "Privacy Policy"
+        static let restorePurchasesText = "Restore Purchases"
+        static let termsOfUseText = "Terms of Use"
+        static let saveSaleText = "SAVE 80%"
+        static let privacyUrlText = "https://some-privacy-url.com"
+        static let termsUrlText = "https://some-terms-url.com"
     }
 }

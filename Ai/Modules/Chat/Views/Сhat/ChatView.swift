@@ -21,6 +21,7 @@ final class ChatView: UIView {
         static let inputContainerSize: CGFloat = 122
         static let importButtonSize: CGFloat = 40
         static let microButtonSize: CGFloat = 40
+        static let estimatedRowHSize: CGFloat = 200
     }
     
     weak var delegate: ChatviewDelegate?
@@ -31,7 +32,7 @@ final class ChatView: UIView {
         tv.backgroundColor = .clear
         tv.separatorStyle = .none
         tv.rowHeight = UITableView.automaticDimension
-        tv.estimatedRowHeight = 200
+        tv.estimatedRowHeight = Constants.estimatedRowHSize
         tv.keyboardDismissMode = .interactive
         tv.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +82,7 @@ final class ChatView: UIView {
     private let titleStack: UIStackView = {
         let s = UIStackView()
         s.axis = .vertical
-        s.spacing = 2
+        s.spacing = Insets.s2
         s.translatesAutoresizingMaskIntoConstraints = false
         return s
     }()

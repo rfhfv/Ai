@@ -33,6 +33,7 @@ final class VideoCardView: UIView {
         let iv = UIImageView()
         iv.image = UIImage(named: Images.Main.smallImage)
         iv.contentMode = .scaleAspectFit
+        iv.alpha = 0.7
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
@@ -65,6 +66,8 @@ final class VideoCardView: UIView {
         return button
     }()
     
+    // MARK: - Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -74,6 +77,8 @@ final class VideoCardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - Setup UI
 
 private extension VideoCardView {
     func setupUI() {

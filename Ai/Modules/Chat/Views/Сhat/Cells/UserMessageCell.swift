@@ -60,6 +60,8 @@ final class UserMessageCell: UITableViewCell {
     }
 }
 
+// MARK: - Setup UI
+
 private extension UserMessageCell {
     func setupUI() {
         setupViews()

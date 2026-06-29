@@ -71,7 +71,7 @@ final class VideoGenerationView: UIView {
         cv.backgroundColor = .clear
         cv.isPagingEnabled = false
         cv.showsHorizontalScrollIndicator = false
-        cv.contentInset = UIEdgeInsets(top: 0, left: Insets.s16, bottom: 0, right: Insets.s16)
+        cv.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         cv.decelerationRate = .fast
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(TemplatePreviewCell.self, forCellWithReuseIdentifier: TemplatePreviewCell.reuseId)
@@ -248,11 +248,25 @@ private extension VideoGenerationView {
         qualityRow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapQuality)))
     }
     
-    @objc func didTapBack() { delegate?.didTapBack() }
-    @objc func didTapUpload() { delegate?.didTapUploadImage() }
-    @objc func didTapCreate() { delegate?.didTapCreate() }
-    @objc func didTapFormat() { delegate?.didTapFormat() }
-    @objc func didTapQuality() { delegate?.didTapQuality() }
+    @objc func didTapBack() {
+        delegate?.didTapBack()
+    }
+    
+    @objc func didTapUpload() { 
+        delegate?.didTapUploadImage()
+    }
+    
+    @objc func didTapCreate() { 
+        delegate?.didTapCreate()
+    }
+    
+    @objc func didTapFormat() {
+        delegate?.didTapFormat()
+    }
+    
+    @objc func didTapQuality() {
+        delegate?.didTapQuality()
+    }
     
     @objc func didTapRemoveImage() {
         uploadedImage = nil
@@ -266,7 +280,7 @@ private extension VideoGenerationView {
     
     func setupViews() {
         backgroundColor = .black
-    
+        
         formatRow.translatesAutoresizingMaskIntoConstraints = false
         qualityRow.translatesAutoresizingMaskIntoConstraints = false
         

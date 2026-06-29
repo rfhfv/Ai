@@ -21,7 +21,7 @@ extension UILabel {
         self.textAlignment = alignment
         self.numberOfLines = numberOfLines
     }
-
+    
     func setGradientText(
         fullText: String,
         gradientPart: String,
@@ -34,19 +34,19 @@ extension UILabel {
             .foregroundColor: baseColor
         ]
         let attributed = NSMutableAttributedString(string: fullText, attributes: baseAttrs)
-
+        
         guard let range = fullText.range(of: gradientPart) else {
             self.attributedText = attributed
             return
         }
         let nsRange = NSRange(range, in: fullText)
-
+        
         let size = NSAttributedString(string: fullText, attributes: [.font: font]).size()
         guard size.width > 0, size.height > 0 else {
             self.attributedText = attributed
             return
         }
-
+        
         let renderer = UIGraphicsImageRenderer(size: size)
         let gradientImage = renderer.image { ctx in
             guard let gradient = CGGradient(
@@ -61,13 +61,13 @@ extension UILabel {
                 options: []
             )
         }
-
+        
         attributed.addAttribute(
             .foregroundColor,
             value: UIColor(patternImage: gradientImage),
             range: nsRange
         )
-
+        
         self.attributedText = attributed
     }
 }

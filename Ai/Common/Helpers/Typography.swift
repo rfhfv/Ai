@@ -8,7 +8,7 @@
 import UIKit
 
 enum Typography {
-    case r12, m12, b12, r14, m14, b14, r16, m16, b16, r20, m20, b20, r24, m24, b24, b28
+    case r12, m12, b12, r14, m14, b14, r16, m16, b16, r20, m20, b20, r24, m24, b24, b28, b34
     
     var font: UIFont {
         switch self {
@@ -28,6 +28,7 @@ enum Typography {
         case .m24: return .systemFont(ofSize: 24, weight: .medium)
         case .b24: return .systemFont(ofSize: 24, weight: .bold)
         case .b28: return .systemFont(ofSize: 28, weight: .bold)
+        case .b34: return .systemFont(ofSize: 34, weight: .bold)
         }
     }
 }

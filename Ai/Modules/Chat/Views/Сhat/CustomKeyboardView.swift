@@ -20,6 +20,7 @@ final class CustomKeyboardView: UIView {
     
     private enum Constants {
         static let topBarViewSize: CGFloat = 88
+        static let buttonWSize: CGFloat = 80
         static let displayTextFieldSize: CGFloat = 40
         static let actionButtonSize: CGFloat = 40
         
@@ -200,7 +201,7 @@ private extension CustomKeyboardView {
     func makeKeyboardStack() -> UIStackView {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = Insets.s8
         stack.distribution = .fillEqually
         stack.translatesAutoresizingMaskIntoConstraints = false
         KeyboardKey.rows.forEach { stack.addArrangedSubview(makeRowStack(keys: $0)) }
@@ -211,7 +212,7 @@ private extension CustomKeyboardView {
     func makeRowStack(keys: [String]) -> UIStackView {
         let row = UIStackView()
         row.axis = .horizontal
-        row.spacing = 6
+        row.spacing = Insets.s6
         row.distribution = .fillEqually
         keys.forEach { row.addArrangedSubview(makeKeyButton(title: $0)) }
         return row
@@ -220,19 +221,19 @@ private extension CustomKeyboardView {
     func makeBottomRow() -> UIStackView {
         let row = UIStackView()
         row.axis = .horizontal
-        row.spacing = 6
+        row.spacing = Insets.s6
         row.distribution = .fill
-
+        
         let numbers = makeKeyButton(title: KeyboardKey.numbers)
-        numbers.widthAnchor.constraint(equalToConstant: 80).isActive = true
-
+        numbers.widthAnchor.constraint(equalToConstant: Constants.buttonWSize).isActive = true
+        
         let space = makeKeyButton(title: KeyboardKey.space)
         space.setContentHuggingPriority(.defaultLow, for: .horizontal)
-
+        
         let ret = makeKeyButton(title: KeyboardKey.return)
-        ret.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        ret.backgroundColor = UIColor(white: 0.3, alpha: 1)
-
+        ret.widthAnchor.constraint(equalToConstant: Constants.buttonWSize).isActive = true
+        ret.backgroundColor = .cmGray
+        
         [numbers, space, ret].forEach { row.addArrangedSubview($0) }
         return row
     }
@@ -246,7 +247,7 @@ private extension CustomKeyboardView {
             weight: .regular
         )
         b.backgroundColor = .cmDarkGray
-        b.layer.cornerRadius = 6
+        b.layer.cornerRadius = Size.Common.cornerRadius8
         b.clipsToBounds = true
         b.addTarget(self, action: #selector(keyButtonTapped(_:)), for: .touchUpInside)
         return b

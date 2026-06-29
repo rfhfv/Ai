@@ -13,6 +13,7 @@ protocol VideoGenerationCoordinatorProtocol: AnyObject {
 }
 
 final class VideoGenerationCoordinator: Coordinator {
+    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -27,7 +28,7 @@ final class VideoGenerationCoordinator: Coordinator {
 // MARK: - VideoGenerationCoordinatorProtocol
 
 extension VideoGenerationCoordinator: VideoGenerationCoordinatorProtocol {
-
+    
     func back() {
         navigationController.popViewController(animated: true)
     }

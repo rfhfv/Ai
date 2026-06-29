@@ -22,7 +22,7 @@ final class SearchBarView: UIView {
         tf.isUserInteractionEnabled = false
         tf.attributedPlaceholder = NSAttributedString(
             string: Strings.Main.searchPlaceholder,
-            attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.5)]
+            attributes: [.foregroundColor: UIColor.cmGray]
         )
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
@@ -35,6 +35,8 @@ final class SearchBarView: UIView {
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +52,8 @@ final class SearchBarView: UIView {
         updateGradientBorder()
     }
 }
+
+// MARK: - setup UI
 
 private extension SearchBarView {
     func setupUI() {

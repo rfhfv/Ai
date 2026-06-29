@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>To upload an image, the app needs access to your photo gallery.</string>
 	<key>API_TOKEN</key>
 	<string> $(API_TOKEN)</string>
+	<key>APPHUD_API_KEY</key>
+	<string> $(APPHUD_API_KEY)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -59,7 +59,7 @@ final class FilterCell: UICollectionViewCell {
             titleLabel.textColor = .white
         } else {
             gradientLayer.removeFromSuperlayer()
-            titleLabel.textColor = .white.withAlphaComponent(0.6)
+            titleLabel.textColor = .cmGray
         }
     }
     

@@ -20,7 +20,7 @@ final class LoadingCell: UITableViewCell {
     private let dotsStack: UIStackView = {
         let s = UIStackView()
         s.axis = .horizontal
-        s.spacing = 4
+        s.spacing = Insets.s4
         s.alignment = .center
         s.clipsToBounds = true
         s.layer.cornerRadius = Size.Common.cornerRadius16

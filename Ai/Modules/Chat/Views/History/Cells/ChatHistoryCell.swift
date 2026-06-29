@@ -50,7 +50,7 @@ final class ChatHistoryCell: UITableViewCell {
     private let textStack: UIStackView = {
         let s = UIStackView()
         s.axis = .vertical
-        s.spacing = 4
+        s.spacing = Insets.s4
         s.translatesAutoresizingMaskIntoConstraints = false
         return s
     }()
@@ -73,6 +73,8 @@ final class ChatHistoryCell: UITableViewCell {
         timeLabel.text = chat.formattedTime
     }
 }
+
+// MARK: - Private
 
 private extension ChatHistoryCell {
     func setupUI() {

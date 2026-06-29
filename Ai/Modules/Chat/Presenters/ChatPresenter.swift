@@ -68,16 +68,19 @@ extension ChatPresenter: ChatPresenterProtocol {
         view?.appendMessage(loadingMessage)
         
         chatService.sendMessage(chatId: chatId, text: trimmed) { [weak self] result in
+            
+            guard let self else { return }
+            
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
                     let aiMessage = ChatMessage(role: .assistant, text: response.assistantMessage)
-                    self?.view?.replaceLastMessage(with: aiMessage)
+                    self.view?.replaceLastMessage(with: aiMessage)
                     
                 case .failure(let error):
-                    let errorMessage = ChatMessage(role: .assistant, text: "Что-то пошло не так. Попробуй ещё раз.")
-                    self?.view?.replaceLastMessage(with: errorMessage)
-                    self?.view?.showError(error.localizedDescription)
+                    let errorMessage = ChatMessage(role: .assistant, text: Strings.Chat.errorText)
+                    self.view?.replaceLastMessage(with: errorMessage)
+                    self.view?.showError(error.localizedDescription)
                 }
             }
         }

@@ -23,6 +23,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        showPaywallIfNeeded()
+    }
+    
+    private func showPaywallIfNeeded() {
+        let isFirstLaunch = !UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+        guard isFirstLaunch else { return }
+        UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            guard let root = self.window?.rootViewController else { return }
+            PaywallManager.shared.present(from: root)
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) { }

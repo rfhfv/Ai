@@ -13,6 +13,7 @@ protocol VideoResultCoordinatorProtocol: AnyObject {
 }
 
 final class VideoResultCoordinator: Coordinator{
+    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

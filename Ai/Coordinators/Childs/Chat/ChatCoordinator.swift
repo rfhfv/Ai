@@ -22,7 +22,7 @@ final class ChatCoordinator: Coordinator {
     }
     
     func start() {
-        let presenter = ChatPresenter(coordinator: self, chatId: "current_chat_id")
+        let presenter = ChatPresenter(coordinator: self, chatId: Strings.Chat.chatId)
         let vc = ChatViewController(presenter: presenter)
         presenter.view = vc
         navigationController.pushViewController(vc, animated: true)

@@ -37,6 +37,8 @@ final class VideoGenerationViewController: UIViewController {
         presenter.viewDidLoad()
     }
     
+    // MARK: - Private
+    
     private func setupDelegates() {
         detailView.delegate = self
     }
@@ -54,8 +56,13 @@ extension VideoGenerationViewController: VideoGenerationViewProtocol {
 
 extension VideoGenerationViewController: VideoGenerationViewDelegate {
     
-    func didTapBack() { presenter.didTapBack() }
-    func didTapCreate() { presenter.didTapCreate() }
+    func didTapBack() {
+        presenter.didTapBack()
+    }
+    
+    func didTapCreate() {
+        presenter.didTapCreate()
+    }
     
     func didTapUploadImage() {
         var config = PHPickerConfiguration()

@@ -8,8 +8,10 @@
 import Foundation
 
 enum Images {
+    
     enum Common {
         static let backImage = "Arrow"
+        static let backgroundImage = "Background"
     }
     
     enum Main {
@@ -53,6 +55,15 @@ enum Images {
         static let replaceImage = "Replace"
         static let resultImage = "Result"
         static let playVideoImage = "Play Video"
-        static let checkmarkImage = "Checkmark"
+        static let checkmarkImage = "CM Checkmark"
+    }
+    
+    enum Paywall {
+        static let contentImage = "Content"
+        static let infoImage = "Info"
+        static let starsImage = "Stars"
+        static let textImage = "Text"
+        static let timeImage = "Time"
+        static let xMarkImage = "xmark"
     }
 }

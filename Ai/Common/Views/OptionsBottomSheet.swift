@@ -8,7 +8,7 @@
 import UIKit
 
 final class OptionsBottomSheet: UIViewController {
-
+    
     private let options: [String]
     private var selectedOption: String
     private let onSelect: (String) -> Void

@@ -35,6 +35,8 @@ final class VideoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    // MARK: - Private 
+    
     private func setupDelegates() {
         videoView.delegate = self
     }
@@ -63,7 +65,7 @@ extension VideoViewController: VideoViewProtocol {
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: Strings.Video.cancelText, style: .cancel))
-        alert.addAction(UIAlertAction(title: Strings.Video.settingsText , style: .default) { _ in
+        alert.addAction(UIAlertAction(title: Strings.Video.allowText , style: .default) { _ in
             guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
             UIApplication.shared.open(url)
         })

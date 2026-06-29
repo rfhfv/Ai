@@ -65,7 +65,7 @@ private extension ChatHistoryPresenter {
                         let sections = self?.buildSections(from: chats) ?? []
                         self?.view?.showChats(sections)
                     }
-                case .failure(let error):
+                case .failure:
                     self?.view?.showEmpty()
                 }
             }

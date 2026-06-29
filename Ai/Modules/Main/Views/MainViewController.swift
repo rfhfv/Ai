@@ -35,7 +35,13 @@ final class MainViewController: UIViewController {
     }
 }
 
+// MARK: - MainViewDelegate
+
 extension MainViewController: MainViewDelegate {
+    func showPaywall() {
+        PaywallManager.shared.present(from: self)
+    }
+    
     func didTapSearch() {
         presenter.didTapChat()
     }

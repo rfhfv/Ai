@@ -37,8 +37,6 @@ final class ChatHistoryView: UIView {
         return tv
     }()
     
-    // MARK: - UI Elements
-    
     private let topBar: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false

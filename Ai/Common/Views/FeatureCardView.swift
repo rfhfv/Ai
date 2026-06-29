@@ -34,6 +34,8 @@ final class FeatureCardView: UIView {
         return l
     }()
     
+    // MARK: - Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -43,12 +45,16 @@ final class FeatureCardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Configure
+    
     func configure(image: String, title: String, subtitle: String) {
         imageView.image = UIImage(named: image)
         titleLabel.text = title
         subtitleLabel.text = subtitle
     }
 }
+
+// MARK: - Setup UI
 
 private extension FeatureCardView {
     func setupUI() {

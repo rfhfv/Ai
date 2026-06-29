@@ -22,7 +22,7 @@ final class VideoView: UIView {
         static let filterCellHeight: CGFloat = 30
         static let previewCellHeight: Int = 232
     }
-
+    
     weak var delegate: VideoViewDelegate?
     private(set) var selectedFilterIndex: Int = 0
     private var didInvalidateLayout = false
@@ -35,12 +35,7 @@ final class VideoView: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .clear
         cv.showsHorizontalScrollIndicator = false
-        cv.contentInset = UIEdgeInsets(
-            top: 0,
-            left: Insets.s12,
-            bottom: 0,
-            right: Insets.s12
-        )
+        cv.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(FilterCell.self, forCellWithReuseIdentifier: FilterCell.reuseId)
         cv.dataSource = self
@@ -56,12 +51,7 @@ final class VideoView: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .clear
         cv.showsVerticalScrollIndicator = false
-        cv.contentInset = UIEdgeInsets(
-            top: Insets.s16,
-            left: Insets.s16,
-            bottom: Insets.s16,
-            right: Insets.s16
-        )
+        cv.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(VideoGridCell.self, forCellWithReuseIdentifier: VideoGridCell.reuseId)
         cv.dataSource = self

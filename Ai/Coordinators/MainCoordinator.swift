@@ -13,6 +13,7 @@ protocol MainCoordinatorProtocol: AnyObject {
 }
 
 final class MainCoordinator: Coordinator, MainCoordinatorProtocol {
+    
     private var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     
